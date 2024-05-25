@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="placeholder.html">Placeholder</a></li>
+        </ul>
+    </nav>
+    
+    <div class="generator-container">
+        <h1>Password Generator</h1>
+        <label for="length">Password Length: <span id="lengthDisplay">12</span></label>
+        <input type="range" id="length" min="8" max="20" value="12" onchange="updateLengthDisplay(this.value)">
+        <br>
+        <label class="radio-label"><input type="radio" name="complexity" value="easy" checked> Easy (Letters)</label>
+        <label class="radio-label"><input type="radio" name="complexity" value="mid"> Medium (Letters & Numbers)</label>
+        <label class="radio-label"><input type="radio" name="complexity" value="complex"> Complex (All Characters)</label>
+        <br>
+        <button onclick="generatePassword()">Generate Password</button>
+        <button onclick="copyPassword()">Copy Password</button>
+        <p id="passwordDisplay"></p>
+        <div id="copyNotification" class="copy-notification"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

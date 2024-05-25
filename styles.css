@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffa500, #800080);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px; /* Space for the fixed navbar */
+    margin: 0;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFA500;
+}
+
+.generator-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 60px; /* Ensure form is below navbar */
+}
+
+input[type="range"], input[type="radio"], input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    width: 45%;
+    padding: 10px;
+    margin-top: 20px; /* More space around buttons */
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.radio-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .generator-container, button {
+        width: 90%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffa500, #800080);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px; /* Space for the fixed navbar */
+    margin: 0;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFA500;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 80px; /* Adjusted margin to accommodate fixed navbar */
+}
+
+.form-container input[type="text"], .form-container input[type="password"] {
+    width: calc(100% - 22px); /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form-container button {
+    width: calc(50% - 12px); /* Half width minus half the gap */
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #555;
+}
+
+.notification {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: green; /* Success message in green */
+    text-align: center;
+    display: none; /* Hide by default */
+}
+
+.notification.show {
+    display: block; /* Show notification when class 'show' is added */
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .form-container, .form-container button {
+        width: 90%;
+    }
+}
